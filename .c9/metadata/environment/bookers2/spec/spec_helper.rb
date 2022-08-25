@@ -1,0 +1,1 @@
+{"mime":"text/x-script.ruby","filter":false,"title":"spec_helper.rb","tooltip":"/bookers2/spec/spec_helper.rb","ace":{},"undoManager":{"mark":-1,"position":-1,"stack":[]},"timestamp":1660825201732,"hash":"f8f726d43e00c6e4da1095557b0d5f26864f8170"}
