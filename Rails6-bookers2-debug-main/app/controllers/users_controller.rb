@@ -5,7 +5,19 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @books = @user.books
     @book = Book.new
-    
+
+  end
+  
+   def follows
+    user = User.find(params[:id])
+    @users = user.followings
+    render 'relationships/follows'
+   end
+  
+  def followers
+    user = User.find(params[:id])
+    @users = user.followers
+    render 'relationships/followers'
   end
 
   def index
@@ -13,7 +25,7 @@ class UsersController < ApplicationController
     @user = current_user
     @book = Book.new
   end
-  
+
   def edit
     @user = User.find(params[:id])
     if @user == current_user
@@ -32,6 +44,8 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+    
+ 
   end
 
   private
