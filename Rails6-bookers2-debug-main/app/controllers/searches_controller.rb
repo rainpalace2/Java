@@ -6,8 +6,14 @@ class SearchesController < ApplicationController
 
     if @range == "User"
       @users = User.looks(params[:search],params[:word])
+      render 'index'
     else
       @books = Book.looks(params[:search],params[:word])
+      render 'index'
     end
   end
+  
+  def index
+  end
+
 end
