@@ -1,0 +1,10 @@
+<td>コメント数 : <%= book.book_comments.count %></td>
+<tr>
+ <% book.book_comments.each do |book_comment| %>
+ <td><%= image_tag book_comment.user.get_profile_image, size:'50x50' %></td>
+ <td><%= book_comment.comment %></td>
+<% if book_comment.user == current_user %>
+ <td><%= link_to "destroy",book_book_comment_path(book_comment.book,book_comment),method: :delete, remote: true %></td>
+</tr> 
+<% end %>
+<% end %>
